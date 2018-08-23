@@ -16,10 +16,11 @@ export default {
     AppLogo
   },
   async data () {
-    const { data } = await axios.get('http://huntingmeat.com/api/search?text=optics')
+    const params = { text: 'optics' }
+    const { data } = await axios.get('http://brandonaaskov.local:3001/api/search', { params })
     console.log(data)
-    // initialize state here
-    return {}
+    // before page renders state stuff
+    return { data }
   },
   computed: {},
   methods: {},
