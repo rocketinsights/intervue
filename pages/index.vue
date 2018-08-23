@@ -17,7 +17,7 @@ export default {
   },
   async data () {
     const params = { text: 'optics' }
-    const { data } = await axios.get('http://brandonaaskov.local:3001/api/search', { params })
+    const { data } = await axios.get('http://dev-meat-eater.pantheonsite.io/wp-json/wp/v2/posts', { params })
     console.log(data)
     // before page renders state stuff
     return { data }
